@@ -1,0 +1,65 @@
+.container {
+    position: absolute;
+    text-align: center;
+    color: white;
+  }
+
+  .element {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+body {
+    background-color: #F5F5F5; 
+    color: #555;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+}
+p {
+  width: 600px;
+  margin: 30px auto;
+}
+.element2 {   
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  width: 800px; 
+  height: 800px;
+  margin: 30px auto;
+  text-align: justify;
+  transition: all 2s ease; 
+} 
+
+.element3 {   
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  width: 800px; 
+  height: 800px;
+  margin: 30px auto;
+  text-align: justify;
+  transition: all 2s ease;
+} 
+
+.element3 {   
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  width: 800px; 
+  height: 800px;
+  margin: 30px auto;
+  text-align: justify;
+  transition: all 2s ease;
+} 
+
+.element4 {   
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  width: 800px; 
+  height: 800px;
+  margin: 30px auto;
+  text-align: justify;
+  transition: all 2s ease;
+} 
