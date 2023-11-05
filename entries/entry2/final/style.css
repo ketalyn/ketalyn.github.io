@@ -1,0 +1,163 @@
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .containerBox {
+    position: relative;
+    display: inline-block;
+    height: 700px;
+    width: 500px;
+ }
+
+ .dark-overlay {
+  position: absolute;
+  top: 500;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+  transition: all ease-in-out 200;
+}
+
+ .text-box {
+    position: absolute;
+    height: 100%;
+    text-align: center;    
+    width: 100%;
+ }
+ .text-box:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+ }
+ h4 {
+    display: inline-block;
+    font-size: 20px; /*or whatever you want*/
+    color: #bfd8f2;   
+ }
+ img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+ }
+
+.demo-typewriter span {
+    color: #262626;
+    overflow: hidden;   
+    border-right: .10em solid #FF8D8D;
+    white-space: nowrap;   
+    margin: 0 auto;   
+    letter-spacing: .4rem;   
+    animation: demo-typewriter 3s steps(30, end), demo-cursor 1s step-end infinite;
+  }
+  @keyframes demo-typewriter {
+    from { 
+      width: 0;
+    }
+    to { 
+      width: 100%;
+    }
+  }
+  
+  @keyframes demo-cursor {
+    from, to { 
+      border-color: transparent; 
+  }
+    50% { 
+  border-color: #FF8D8D; 
+    }
+  }
+
+h1 {
+    font-size: 30px;
+    font-family: "Exo", sans-serif;
+    font-weight: 900;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: auto;
+    text-transform: uppercase;
+    background: linear-gradient(219deg, 
+      var(--color-1) 19%, 
+      transparent 19%,transparent 20%, 
+      var(--color-2) 20%, var(--color-2)  39%,
+      transparent 39%,transparent 40%, 
+      var(--color-3) 40%,var(--color-3) 59% ,
+      transparent 59%,transparent 60%, 
+      var(--color-4) 60%, var(--color-4) 79%,
+      transparent 79%, transparent 80%, 
+      var(--color-5) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    font-size: 24px;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.container {
+    background-color: gray;
+    text-align: center;
+    padding: 25px;
+    margin: 10 px;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100wh; 
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: #20126f
+}
+
