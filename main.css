@@ -79,9 +79,6 @@ img {
 }
 
 
-.index-category-box:nth-child(1) {
-    background-image: url(imgs/frame_1.png);
-}
 
 .index-category-box h3 {
     font-size: 22px;
