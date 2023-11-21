@@ -6,85 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>NOSY LISTENER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
 
 <body>
     <div class="main">
-        <div class="top_bar">
-            <button onclick="sidebar()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAO9JREFUaEPt19EKgzAQRNH45a1/XgIGRGztsnMnBLYvUojpnB3BdGuLf7bF87cCzG6wGqgGkhOoRyg5wPTt1cBlhO/j+7imJ/y0gbKBHvp1/ODeWrMgVIBz+DE0C0IBuAtvQ9CADkGbUAB6yF8toAgVYBpCCZiCUAPsCAJgRVAAG4IEWBA0AEc4ACiiAE/HXfotTTeAHzFIAB6+t08BLOEpgC08AbCGVwPs4ZWAKeFVgGnhHQD0/7AK8O2sg4dXAq4IS3g1YCDO1z+OSrkl1Js4lypwdwECw0KWVgPIWAObVgOBYSFLqwFkrIFNl2/gA2SkNjHwWJfpAAAAAElFTkSuQmCC"/></button>
-            <div class="options">
-                <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAdRJREFUaEPtmAtOAzEMRN2TAScDTgacDDRSLUVuPmPjbLLqRkJQaUnnxfbYm5ucfN1Orl8ugNURvCJwj8CriLyLCH7r+hSRj9kRyogARH91hH6LyM8smAwAnDJOn1mIClZaZDIAfhnllWcAg+jgJ7xmAGBPnPCLqYmeyHC9zAIoxXpSzF0vRwAoDIpd3YpJGapejgSwUcFnpvi76bUKwMKM6uWtVew7ADD1gtoAxMPaDaCsF9scq1p3BQCI7S8XQMv6qJNifNM8Q+37FCmkDQhWh4XPZcekTmpVBDxjgGrMiGpKEUfE44u3AIiK3wbA5jVyXocr/N0DXB6BmriWKHTL8j14iwhYgN40WHsfXh4Bjy1uCWDTojnK3n3TA1y2g5T+Ugu3B8CTbszY3Ot39DBnRTVn8crEyLycRy2aBmhdVKk4dR17E8c4UFR8c++WY0S+iDn99P7SszwPBCN+Sn8ZeTYDwYhHCngKnrbnEYC6gt5lIu/1KhAXtp6rQY/dpgMExvmHf/HYc8o4nSG63MMDQKcbm0IZMFP6y5EAU/rLkQA1J2IiO/1ulBERnYOGFn10BEpbHt1MD8Uzs4v3dL3P/7u/rIqAF7T5/AWQdpTBjU4fgT+oNIMxrK3xgQAAAABJRU5ErkJggg=="/></button>
-                <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAV5JREFUaEPtWVEOwjAIxZvpydST6c00JFZnQ7tCXztISuKXHbzHg7J2Jwpup+D4aRE4WsHZCtyIiH8wm0mAgV+JsGU7g0ACnrIOjQl1JtRFDp6XQGNCnW0ISMDDKFAD71qBPeCuFWgF704BDXB3CljAT1XACnBvyuY7X9d0lrbRMxE99lB0/J/HfBHR3fqKIRFg8ExilEkEzKXliYBJBYkASzrSSgqYVPBG4EJET032vBFQl5E3Apx9VqHZFoHmVP0W1ppY3cjeFAhPYPUAS3jkIAu/jYYeZOr6L3X8USWkzn6JwKiDTOlIyQkzZb+2545UQRpkpuzXCPCBhu8x2dCHm+FHypa3g0TQQg56G9jrzNIvvTH/EoxwplUDEfNLAumsVQ1kTOxV96fhuflrveGaQJI29PV6IlHqjRAKbHeK0J+YJDXCKZCrEfYza8uEV6+ByqmODnhgEQAkscvFGzimSjGi3WNuAAAAAElFTkSuQmCC"/></button>
-                <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAATxJREFUaEPtltEOwiAMRbs/0y9Tv0z/TEMyEjWD3pbCZQl78WFsnNPbFTc5+bWdnF+WADtBdgL3vQD511wPpkCCvu3EDxFxSbAEvuFz1V0SDIEjeLfEaIGLiDyVRjclMVogsdcSMCfBEEAk4BRGCKS2eR20TSkJGD69s7dAhixB/UuY4HsLoHCaZPWb75WAtT1KbaaezD0EtCljbpOaRbSABm8ek1oEkQIofGa6FqaTxvxzP0rACh/WRhECNPiIMUqFbxWgw7cITAHvFZgG3iMwFbxVYDp4i8CU8KjAtPCowNtwtoedsOieyEmMCgyHj0yAAh8lQIOPEKDCtwrQ4VEBdCBQ1iFTiAKGbroE0Er1WrcS6FVZ9L1IAuhfCXRP67oq4xKwltOxfiXgKNq4R5BvYByNY6cl4Cha6CMfP5BFMWPKK7kAAAAASUVORK5CYII="/></button>
-            </div>
-            <button onclick="open_p()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAALZJREFUaEPtlTEOgDAMxNKfw8thYQVOWFGFauZeSOxUHfXzb/y8/3KA2QY1oAFIwBWCAHFcAxghLLCEgQNCovFHyIkBB4AKNAAB9saTO9DbAazuABAgjmsAI4QFEgPdD1nSw+2YSdgBXrYkgbi2AXjNeuNIX29rWXUHyDj1ndJAH9uscmLg60O2V9WWtfH9lAM8sNNAsljJCiV1pp1xgGnorx9rQAOQgCsEAeK4BjBCWEADECCOn93vEDHtWhzZAAAAAElFTkSuQmCC"/></button>
-        </div>
-        
-        <div class="playing_part">
-            <div class="img">
-                <img src="imgs/1.jpg" alt="">
-            </div>
-        </div>
+        <p id="logo"><i class="fa fa-music" aria-hidden="true"></i></p>
+    
 
-        <div class="control_part">
-            <div class="song_title">
-                <p>song title</p>
-                <p>artist name</p>
-            </div>
+        <div class="left">
+            <img id="track_image">
+            <p id="volume_show">90</p>
 
-            <div class="control_buttons">
-                <div class="range_slider">
-                    <input type="range" min="0" max="100" id="slider" value="0">
-                    <p>3:00</p>
-                </div>
-
-                <div class="main_btns">
-                    <button id="previous"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAPhJREFUaEPtllEOwjAMQ72bwcmAk3E0UCUqVRXdpjgSsXB/9pU0fo4LG8TPJj4/LODXDtoBO0AS8AqRAOlyO0AjJBvYARIgXf7XDrwmfBEYTwBXxobIpf0+RsAFwA1A+zIzUMVRAffP8B2EjICR+rg1EgJm6lICWlAb/dUp68BqZWYhJQXsrUxpAWepl8zAY3oez/4+lVkheQGd5NGrUzoDfTjZEI90z4ook4HVIEdCygtorkj/lRjX6lvAJRzYy4acgHmlJAWMz23LR/hQ6sO3JhZaQCLMUCs7EMKWWGQHEmGGWtmBELbEIjuQCDPUyg6EsCUWyTvwBsofKDEOGIj1AAAAAElFTkSuQmCC"/></button>
-                    <button id="play_btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAOZJREFUaEPtlsEKg0AQQ8c/b7+s/lllQcGDHiSZpEuzUHqaZV5eWl1q8rNMvn8FwG0wBmIATCAVAgOEx2MAjhC84K8NvKpqfKwHMfDdN387QRgAhwELCBNggMgh2AByG10AMpBugPZaKQBabSgBWkAcANRauQBoNtwAMMgvAKz7A3B8Pz5uAPjJ7QKAUj9rUgPQFj8glABwXa5+IAoAeuqqCrUu3l2hlrooKiRJvaNC8sWZFZLVhV2hD/IK8Pid4WYA+Rtl7QDdEwAoPsJwDBBChK6IASg+wnAMEEKErogBKD7C8PQGNmGlNjFakjrbAAAAAElFTkSuQmCC"/></button>
-                    <button id="previous"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAPJJREFUaEPtl1EKwzAMQ92j7WTbTrbdbMMfgRLaZcKYSUyB0h/H5ElOnGwhPjbx9YcBfu2gHbADRQVcQkUBy9PtQFnCYgI7UBSwPP2vHbhFRH7oeE0TSiJWJo+FXCLiCVDQAeTa74AblAAIBC3AqKKVG/QAKzckAIYbRxtcCuDIDTmAGUISYL/Br2yNDOhhkXvioQiQnTqP1/zLldDcF2QA9qrvq0YC4FM3pgdY3U5pAc5KZj6lKAFWFzjaPfCt6pQA8k9KpAO3xVbexG2LQhIbAFGrI9YOdKiK5LQDiFodsXagQ1Ukpx1A1OqItQMdqiI531yEPDFvtupsAAAAAElFTkSuQmCC"/></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="playlist">
-            <div class="p_song">
-                <p id="p_title">song name</p>
-                <p id="p_artist">artist name</p>
-                <button id="active_btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAOZJREFUaEPtlsEKg0AQQ8c/b7+s/lllQcGDHiSZpEuzUHqaZV5eWl1q8rNMvn8FwG0wBmIATCAVAgOEx2MAjhC84K8NvKpqfKwHMfDdN387QRgAhwELCBNggMgh2AByG10AMpBugPZaKQBabSgBWkAcANRauQBoNtwAMMgvAKz7A3B8Pz5uAPjJ7QKAUj9rUgPQFj8glABwXa5+IAoAeuqqCrUu3l2hlrooKiRJvaNC8sWZFZLVhV2hD/IK8Pid4WYA+Rtl7QDdEwAoPsJwDBBChK6IASg+wnAMEEKErogBKD7C8PQGNmGlNjFakjrbAAAAAElFTkSuQmCC"/></button>
-            </div>
-
-            <div class="p_song active_song">
-                <p id="p_title">song name</p>
-                <p id="p_artist">artist name</p>
-                <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAOZJREFUaEPtlsEKg0AQQ8c/b7+s/lllQcGDHiSZpEuzUHqaZV5eWl1q8rNMvn8FwG0wBmIATCAVAgOEx2MAjhC84K8NvKpqfKwHMfDdN387QRgAhwELCBNggMgh2AByG10AMpBugPZaKQBabSgBWkAcANRauQBoNtwAMMgvAKz7A3B8Pz5uAPjJ7QKAUj9rUgPQFj8glABwXa5+IAoAeuqqCrUu3l2hlrooKiRJvaNC8sWZFZLVhV2hD/IK8Pid4WYA+Rtl7QDdEwAoPsJwDBBChK6IASg+wnAMEEKErogBKD7C8PQGNmGlNjFakjrbAAAAAElFTkSuQmCC"/></button>
-            </div>
-
-            <div class="p_song">
-                <p id="p_title">song name</p>
-                <p id="p_artist">artist name</p>
-                <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAOZJREFUaEPtlsEKg0AQQ8c/b7+s/lllQcGDHiSZpEuzUHqaZV5eWl1q8rNMvn8FwG0wBmIATCAVAgOEx2MAjhC84K8NvKpqfKwHMfDdN387QRgAhwELCBNggMgh2AByG10AMpBugPZaKQBabSgBWkAcANRauQBoNtwAMMgvAKz7A3B8Pz5uAPjJ7QKAUj9rUgPQFj8glABwXa5+IAoAeuqqCrUu3l2hlrooKiRJvaNC8sWZFZLVhV2hD/IK8Pid4WYA+Rtl7QDdEwAoPsJwDBBChK6IASg+wnAMEEKErogBKD7C8PQGNmGlNjFakjrbAAAAAElFTkSuQmCC"/></button>
-            </div>
-
-            <div class="p_song">
-                <p id="p_title">song name</p>
-                <p id="p_artist">artist name</p>
-                <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAOZJREFUaEPtlsEKg0AQQ8c/b7+s/lllQcGDHiSZpEuzUHqaZV5eWl1q8rNMvn8FwG0wBmIATCAVAgOEx2MAjhC84K8NvKpqfKwHMfDdN387QRgAhwELCBNggMgh2AByG10AMpBugPZaKQBabSgBWkAcANRauQBoNtwAMMgvAKz7A3B8Pz5uAPjJ7QKAUj9rUgPQFj8glABwXa5+IAoAeuqqCrUu3l2hlrooKiRJvaNC8sWZFZLVhV2hD/IK8Pid4WYA+Rtl7QDdEwAoPsJwDBBChK6IASg+wnAMEEKErogBKD7C8PQGNmGlNjFakjrbAAAAAElFTkSuQmCC"/></button>
-            </div> 
+            <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()">
         </div>
     </div>
 
-<script>
-    let playlist = document.querySelector('.playlist');
+    <div class="right">
+        <div class="show_song_no">
+            <p id="present">1</p>
+            <p></p>
+            <p id="total">5</p>
+        </div>
 
-    function open_p(){
-        playlist.classList.toggle('active');
-    }
-</script>
-<script src="app.js"></script>
+        <p id="title">title.mp3</p>
+        <p id="artist">artist name</p>
 
+        <div class="middle">
+            <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+            <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button onabort="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="duration">
+            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+        <button id="auto" onclick="auto_switch()">Autoplay <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+
+    </div>
+        
 </body>
 
 </html>
