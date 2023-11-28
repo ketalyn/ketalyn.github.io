@@ -5,6 +5,7 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 .grid{
     --dot-bg: black;
   --dot-color: white;
@@ -94,5 +95,9 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+li{
+    color: red;
 }
 
