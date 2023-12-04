@@ -2,113 +2,92 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MUSEUM/DIALOGUE/SPEECH</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MUSEUM/DIALOGUE/SPEECH</title>
 
-  <!-- This is how to link to fonts using a CDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="reset.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reset.css">
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
 </head>
+
 <body>
+    <form action="/" class="form">
+      <button id="menu-icon" class="menu-icon"><box-icon name='menu'></box-icon></button>
+        <nav class="navbar">
+          <ul class="nav" id="navList">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Experiences</a>
+                            <div class="dropdown-content">
+                                <a href="#">Web Development</a>
+                                <a href="#">Graphic Design</a>
+                                <a href="#">Digital Marketing</a>
+                            </div>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </ul>
+        </nav>
+    </form>
 
-  <div class="wrapper-main">
-      <h1>MUSEUM</h1>
-      <p>DIALOGUE</p>
-      <a href="#">SPEECH</a>
-  </div>
-      <header class="header-main">
+    <header>
+        <div class="title" id="maintitle">THE ART OF CONVERSATION</div>
+    </header>
 
-      </header>
+    <div class="whitesection">
+        <section>
+            <div class="colorblock"></div>
+            <div class="secondblock"></div>
+        </section>
 
-    <section class="index-category">
-      <div class="index-category-box">
-      <a href="entries/entry1/final/index.html">
-        <button>ENTRY1
-          <img src="imgs/frame_2.png">
-        </button>
-      </a>
-      </div>
+        <section>
+            <div class="thirdblock"></div>
+        </section>
 
-      <div class="index-category-box">
-      <a href="entries/entry2/final/index.html">
-        <button>ENTRY 2
-          <img src="imgs/frame_2.png">
-        </button>
-      </a>
-      </div>
-
-      <div class="index-category-box">
-      <a href="entries/entry3/final/index.html">
-        <button>ENTRY 3
-          <img src="imgs/frame_4.png">
-        </button>
-      </a>
-      </div>
-
-      <div class="index-category-box">
-      <a href="entries/entry4/index.html">
-        <button>ENTRY 4
-          <img src="imgs/frame_4.png">
-        </button>
-      </a>
-      </div>
-
-      <div class="index-category-box">
-      <a href="entries/entry5/index.html">
-        <button>ENTRY 5
-          <img src="imgs/frame_5.png">
-        </button>
-      </a>
-     </div>
-
-      <div class="index-category-box">
-      <a href="entries/entry7/index.html">
-        <button>ENTRY 7
-          <img src="imgs/frame_6.png">
-        </button>
-      </a>
-      </div>
-
-      <div class="index-category-box">
-        <a href="entries/entry8/index.html">
-          <button>ENTRY 8
-            <img src="imgs/frame_6.png">
-          </button>
-        </a>
-        </div>
-
-       <div class="index-category-box">
-        <a href="entries/entry9/index.html">
-          <button>ENTRY 9
-            <img src="imgs/frame_5.png">
-          </button>
-        </a>
-      </div>
-
-      <div class="index-category-box">
-        <a href="entries/entry10/index.html">
-          <button>ENTRY 10
-            <img src="imgs/frame_2.png">
-          </button>
-        </a>
-      </div>
-
-      <div class="index-category-box">
-        <a href="entries/entry11/index.html">
-          <button>ENTRY 11
-            <img src="imgs/frame_2.png">
-          </button>
-        </a>
-      </div>
-
-    </section>
-
+        <section class="entries">
+            <div class="preview">
+                <div class="preview-img"></div>
+            </div>
+            <div class="container">
+                <div class="projects">
+                    <div class="project" id="entry1"><a href="entries/entry1/final/index.html"><p>a phone call with a
+                                friend</p></a></div>
+                    <div class="project" id="entry2"><a href="entries/entry2/final/index.html"><p>snippets</p></a></div>
+                    <div class="project" id="entry3"><a href="entries/entry3/final/index.html"><p>the trials of trying
+                                to read in a busy cafe</p></a></div>
+                    <div class="project" id="entry4"><a href="entries/entry4/index.html"><p>needed/no longer needed</p></a>
+                    </div>
+                    <div class="project" id="entry5"><a href="entries/entry5/index.html"><p>on the phone with Mom</p></a>
+                    </div>
+                    <div class="project" id="entry7"><a href="entries/entry7/index.html"><p>visual dialogue</p></a></div>
+                    <div class="project" id="entry8"><a href="entries/entry8/index.html"><p>old school</p></a></div>
+                    <div class="project" id="entry9"><a href="entries/entry9/index.html"><p>new age hieroglyphs</p></a></div>
+                    <div class="project" id="entry10"><a href="entries/entry10/index.html"><p>eavesdropping
+                                enabler</p></a></div>
+                    <div class="project" id="entry11"><a href="entries/entry11/index.html"><p>let's talk</p></a></div>
+                </div>
+            </div>
+        </section>
+    </div>
 
 </body>
 

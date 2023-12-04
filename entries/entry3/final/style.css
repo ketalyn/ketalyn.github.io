@@ -8,6 +8,7 @@ h1 {
     color: rgb(247, 235, 212);
     font-weight: 600;
     text-transform: uppercase;
+    text-align: center;
 }
 
 p{
@@ -21,6 +22,15 @@ p{
     float: left;
 }
 
+.stain {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
 
 
 /* sadsadsa */
@@ -37,6 +47,7 @@ p{
     justify-content: center;
     column-gap: 20px;
     flex-wrap: wrap;
+    align-content: center;
 }
 
 .index-category p {
@@ -94,3 +105,52 @@ h3{
     letter-spacing: 4px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    height: 2000px; /* Adjust the body height to simulate scrolling */
+    width: 2000px;
+  }
+
+  .coffee-stain {
+    position: fixed;
+    width: 100px; /* Adjust the width of the coffee stain */
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #stain1 {
+    top: 20px;
+    left: 5px;
+    width: 500px;
+  }
+
+  #stain2 {
+    top: 120px;
+    left: 50px;
+  }
+
+  #stain3 {
+    top: 200px;
+    left: 100px;
+  }
+
+  #stain4 {
+    top: 200px;
+   right: 100px;
+  }
+
+  #stain5 {
+    top: 200px;
+    right: 100px;
+  }
+
+  #stain6 {
+    top: 200px;
+    right: 100px;
+  }

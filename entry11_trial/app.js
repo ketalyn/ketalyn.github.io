@@ -1,16 +1,21 @@
-const arr = [
-    { title: "song1"},
-    { title: "song2"},
-    { title: "song3"},
-    { title: "song4"},
-    { title: "song5"}
-];
+// script.js
+function addText() {
+    const textInput = document.getElementById('textInput');
+    const canvas = document.getElementById('canvas');
 
-function onClickHandler() {
-    const ul = document.getElementsByTagName('ul')[0];
-    const item = arr[Math.floor(Math.random() * arr.length)];
-    ul.innerHTML = `
-            ${item.title}
-        `;
+    const textElement = document.createElement('div');
+    textElement.className = 'text';
+    textElement.innerText = textInput.value;
+
+    // Randomize position on the canvas
+    const posX = Math.random() * (canvas.offsetWidth - textElement.offsetWidth);
+    const posY = Math.random() * (canvas.offsetHeight - textElement.offsetHeight);
+
+    textElement.style.left = `${posX}px`;
+    textElement.style.top = `${posY}px`;
+
+    canvas.appendChild(textElement);
+
+    // Clear the input
+    textInput.value = '';
 }
-

@@ -1,80 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ENTRY9</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Billboard</title>
+  <link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+</head>
 
-    <body>
-        <section>
-            <h1>MAKE YOUR OWN <br> BILLBOARD</h1>
-            <p>Available in Chrome only</p>
-            <p>**Speak into the microphone</p>
-
-            <form class="controls">
-                <fieldset>
-                    <legend>Blend mode</legend>
-                    <div>
-                        <label for="r1">Multiply</label>
-                        <input type="radio" id="r1" checked name="blendMode" value="multiply">
-                    </div>
-                    <div>
-                        <label for="r2">Screen</label>
-                        <input type="radio" id="r2" name="blendMode" value="screen">
-                    </div>
-                    <div>
-                        <label for="r3">None</label>
-                        <input type="radio" id="r3" name="blendMode" value="none">
-                    </div>
-                    </fieldset>
-                    <div>
-                        <label for="dotSize">Background size:<span data-size>0.75rem</span></label>
-                        <input type="range" min="0.3" max="1.5" step="0.1" value="0.5" id="dotSize" name="dotSize">
-                    </div>
-                    <div>
-                        <label for="contrast">Contrast: <span data-contrast>20</span></label>
-                        <input type="range" min="1" max="20" step="1" value="20" id="contrast" name="contrast">
-                    </div>
-                    <div>
-                        <label for="dotRadius">Dot radius: <span data-radius>53rem</span></label>
-                        <input type="range" min="20" max="100" step="1" value="70" id="dotRadius" name="dotradius">
-                    </div>
-                    <div>
-                        <label for="invert">Invert</label>
-                        <input type="checkbox" id="invert">
-                    </div>
-            </form>
-            
-
-            <br><br><br>
-            <div class="cube">  
-                <div class="top">
-                    <div class="container">
-                        <div class="grid">
-                            <div class="card">
-                                <div class="halftone">
-                                    <div class="texts">
-                                        <p>Hello World</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <span style="--i:0;"></span>
-                <span style="--i:1;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:3;"></span>
-            </div>
-    
-        </section>
-        <script src="./app.js"></script>
-
-        
-        
-    </body>
-
-</html>
+<body>
+    <div id="billboard">
+        <div id="electricEffect"></div>
+        <h1>Electric Billboard</h1>
+        <input type="text" id="responseInput" placeholder="Type your response...">
+        <button id="addResponseBtn" onclick="addResponse()">Add Response</button>
+        <ul id="responseList"></ul>
+      </div>
+      

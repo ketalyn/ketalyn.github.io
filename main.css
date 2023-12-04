@@ -1,135 +1,405 @@
+/* Reset and basic styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
 html {
     font-size: 62.5%;
 }
 
-body{
-    background-color:#000;
+body {
     color: #fff;
     text-align: center;
+    width: 100%;
+    min-height: 100vh; /* Adjusted line */
+    font-family: 'Raleway';
+    display: flex; /* Adjusted line */
+    flex-direction: column; /* Adjusted line */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
+
+/* Project styling */
+.project {
+    text-align: center;
+    color: #000;
+    width: 100%;
+    padding: 2.5em 1em;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project:hover {
+    background-color: #f0f0f0;
+}
+
+.project > div {
+    flex: 3;
+}
+
+.project div:last-child {
+    flex: 1;
+}
+
+p {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger menu on smaller screens */
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none; /* Hide the regular navigation on smaller screens */
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #00bcd4;
+        z-index: 1000;
+    }
+
+    .nav li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Navbar and Navigation */
+.navbar {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    text-align: center;
+    top: 0; 
+    left: 0; /* Updated line */
+    width: 100%; /* Updated line */
+    z-index: 1000; 
+    background-color: #00bcd4;
+    height: 30px;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+/* Additional Reset and Styling */
+.navbar > * {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-icon {
+    display: none; /* Initially hide the hamburger menu on larger screens */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /* position: fixed; Remove this line */
+    justify-content: center;
+}
+
+.nav li {
+    margin-right: 80px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #00bcd4;
+}
+
+.nav a:hover + .sidebar,
+.sidebar:hover {
+    width: 200px;
+    height: 200px;
+}
+
+.nav:hover + .sidebar + .content {
+    margin-left: 200px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #850000;
+    min-width: 160px;
+    width: 500px;
+    z-index: 1;
+    left: 0; /* Updated to position on the left */
+    top: 30px; /* Adjusted top position */
+    height: 500px;
+    margin-right: 20px;
+}
+
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 25pt;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li:hover .dropdown-content {
+    display: block;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+    ul {
+        flex-direction: column;
+    }
+
+    .nav {
+        display: none; /* Hide the regular navigation on smaller screens */
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #00bcd4;
+        z-index: 1000;
+    }
+    .nav li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block; /* Initially show the hamburger menu on all screens */
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+}
+
+/* Section Styling */
+.whitesection {
+    background-color: #fff;
+    height: 400px;
+    width: 100%;
+    display: block;
+}
+
+.secondblock {
+    background-color: rgb(46, 91, 173);
+    height: 600px;
+    width: 100%;
+}
+
+.thirdblock {
+    background-color: rgb(0, 24, 69);
+    height: 800px;
+    width: 100%;
+}
+
+/* Title Styling */
+.title {
+    position: fixed;
+    top: 6vw;
+    color: #000;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    font-size: 5vw;
+    transition: bottom 0.5s ease-out;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add media query for responsiveness */
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .title {
+        font-size: 3vw;
+    }
+}
+
+/* Colorblock Styling */
+.colorblock {
+    margin-top: 400px;
+    overflow: hidden;
+    height: 1000px;
+    background: linear-gradient(to bottom, #fff, rgb(46, 91, 173));
+    display: block;
+    width: 100%;
+    align-self: center;
+}
+
+/* Streak Animation */
+.streak {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #fff;
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+    animation: revealStreak 1s ease-out forwards;
+}
+
+@keyframes revealStreak {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Wrapper Styling */
 .wrapper-main {
-    width: 1000px;
+    max-width: 100%;
+    width: 100%;
     padding: 100px 0;
     margin: 0 auto;
     border: 4px solid blue;
 }
 
+/* Header Styling */
 .header-main {
-    width: 1000px;
+    width: 100%;
     height: 60px;
     background-color: #000;
 }
 
-.title{
-    color:#000000;
-    font-family:'Raleway', sans-serif;
-    font-size: 80px;
-}
-
-h1{
+/* Heading Styling */
+h1, h2, h3 {
     font-size: 26px;
     line-height: 32px;
-    color:#fff;
-    font-family:'Raleway', sans-serif;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-h2 {
-    font-size: 26px;
-    line-height: 32px;
-    color:#fff;
-    font-family:'Raleway', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-size: 26px;
-    line-height: 32px;
-    color:#fff;
-    font-family:'Raleway', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-p{
+/* Paragraph Styling */
+p {
     font-size: 2.6rem;
 }
 
+/* Index Category Styling */
 .index-category {
     width: 100%;
     padding: 60px 0;
-    background-color:#fff;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     column-gap: 20px;
 }
 
-.index-category-box{
+.index-category-box {
     width: 200px;
     height: 200px;
-    background-color:red;
+    background-color: red;
 }
 
-img { 
+/* Image Styling */
+img {
     width: 150px;
     height: 180px;
 }
-
-
 
 .index-category-box h3 {
     font-size: 22px;
     line-height: 28px;
 }
 
-
-
+/* Media queries for different screen sizes */
 @media only screen and (max-width: 600px) and (orientation: landscape) {
-
     .wrapper-main {
         width: 100%;
         background-color: orange;
     }
-
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-
     .wrapper-main {
         width: 100%;
         background-color: blue;
     }
-
 }
 
 @media only screen and (min-width: 601px) {
-
     .wrapper-main {
         width: 100%;
         background-color: red;
     }
-
 }
 
 @media only screen and (min-width: 768px) {
-
     .wrapper-main {
         width: 1000px;
         background-color: green;
     }
-
 }
 
 @media only screen and (min-width: 992px) {
-
     .wrapper-main {
         width: 100%;
         background-color: purple;
     }
-
 }
-
-/* <600px, 601px, 768px, 992px, 1200px */
