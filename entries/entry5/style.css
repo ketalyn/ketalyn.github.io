@@ -2,27 +2,47 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
-  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Add a background color */
+}
+
+.reveal-container {
+  max-width: 700px; /* Adjust the max-width as needed */
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
-.typing-container {
-  width: 80%;
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.reveal-text {
+  font-size: 24px; /* Adjust the font size as needed */
   opacity: 0;
-  transform: translateY(20px);
+  width: 100%;
+  transform: translateY(50px);
   transition: opacity 0.8s, transform 0.8s;
 }
 
-.typing-container.show {
+.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+.grow-shrink {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.grow {
+  opacity: 1;
+  transform: scale(1.2); /* Adjust the scale factor for growing */
+}
+
+.shrink {
+  transform: scale(1);
 }

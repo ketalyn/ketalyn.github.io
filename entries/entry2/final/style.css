@@ -12,7 +12,7 @@ h1{
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the minimum and maximum width as needed */
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
@@ -58,3 +58,14 @@ h1{
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
+
+/* Add media queries for different screen sizes */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 10px;
+  }
+}
+
+/* Add more media queries as needed for smaller or larger screen sizes */
+In this example, I added a media query for a maximum screen width of 768px, where the 

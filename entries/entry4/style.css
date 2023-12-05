@@ -11,14 +11,19 @@ h1 {
     font-weight: 600;
     text-transform: uppercase;
     position: fixed;
+    z-index: 2;
+    text-align: center;
 }
 
 div:nth-child(3) {
-    background-color: gold;
-    position: sticky;
-    left: 300px;
-    top: 30px;
-    width: 800px;
+  background-color: gold;
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 
@@ -42,7 +47,8 @@ body {
 .circle{   
   background-color: #c0392b;
   color: white;
-  width: 500px; 
+  width: 100%;
+  max-width: 500px; 
   height: 500px;
   margin: 30px auto;
   text-align:center;
@@ -276,14 +282,17 @@ p{
 
 
 
+
        
-        h1 {
-            text-align: center;
-            color: black;
-            font-family: 'Gordita';
-            font-size: 4rem;
-            margin-top: 40vh;
-        }
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  color: black;
+  font-family: 'Gordita', sans-serif;
+  text-align: center;
+  margin-top: 40vh;
+}
+
        
         p {
             text-align: center;
@@ -292,3 +301,21 @@ p{
             font-size: 2rem;
         }
 
+
+        @media only screen and (max-width: 768px) {
+          h1 {
+              font-size: rem;
+              margin-top: 20vh;
+          }
+      
+          div:nth-child(3) {
+              width: 100%;
+              max-width: none;
+              left: 0;
+              transform: none;
+          }
+      
+          .circle {
+              max-width: 100%;
+          }
+      }

@@ -1,10 +1,59 @@
 /* styles.css */
+
+/* Font Declarations */
+@font-face {
+    font-family: '02.10';
+    src: url('fonts/02.10ITA.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('fonts/amsterdam.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AndroidScratch';
+    src: url('fonts/Android%20Scratch.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Danube';
+    src: url('fonts/DANUB___.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'DarkTech';
+    src: url('fonts/darktech_ldr.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dune';
+    src: url('fonts/Dune_Rise.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Obsiean';
+    src: url('fonts/ODISEAN-Tech-FFP.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpaceAge';
+    src: url('fonts/space%20age.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Yagisa';
+    src: url('fonts/YAGIZA__.TTF') format('truetype');
+}
+
+/* Body Styles */
 body {
     margin: 0;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
 }
 
+/* Canvas Styles */
 .canvas {
     position: absolute;
     top: 0;
@@ -15,13 +64,15 @@ body {
     overflow: hidden;
 }
 
+/* Text Styles */
 .text {
     position: absolute;
     color: #fff;
-    font-size: 24px;
+    font-size: 1.5rem; /* Example using rem unit */
     user-select: none;
 }
 
+/* Textarea Styles */
 textarea {
     position: absolute;
     bottom: 20px;
@@ -30,10 +81,44 @@ textarea {
     height: 60px;
 }
 
+/* Button Styles */
 button {
     position: absolute;
     bottom: 20px;
     left: 340px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem; /* Example using rem unit */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px wide */
+    .text {
+        font-size: 1rem;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    button {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust styles for screens up to 480px wide */
+    .text {
+        font-size: 0.8rem;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    button {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

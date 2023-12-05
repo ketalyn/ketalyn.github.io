@@ -116,12 +116,6 @@ function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
-function showOverlay() {
-    const randomPrompt = getRandomPrompt();
-    document.getElementById('randomPrompt').innerText = randomPrompt;
-    document.getElementById('overlay').style.display = 'flex';
-  }
-
   function getRandomPrompt() {
     const randomIndex = Math.floor(Math.random() * prompts.length);
     return prompts[randomIndex];
@@ -154,3 +148,17 @@ function showOverlay() {
       gridContainer.appendChild(button);
     }
   }
+
+  // Add this function to open the directions popup
+function openDirectionsPopup() {
+  document.getElementById("directions-popup").style.display = "flex";
+}
+
+// Add this function to close the directions popup
+function closeDirectionsPopup() {
+  document.getElementById("directions-popup").style.display = "none";
+}
+
+// Call the openDirectionsPopup function when the page loads (you can adjust this based on your requirements)
+document.addEventListener("DOMContentLoaded", openDirectionsPopup);
+

@@ -7,14 +7,50 @@
 
 .maincontainer{
     display: grid;
-    place-content: center;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-template-rows: auto;
+    height: 50vh;
+    width: 42vh;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    margin: auto;
+    padding-top: 25vh;
+    align-items: center;
+    justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+    .maincontainer {
+       grid-template-columns: repeat(5, 1fr); /* Adjust columns for smaller screens */
+       /* Additional adjustments as needed */
+    }
+ } 
+
+ h1 {
+    text-align: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px; /* Adjust the width as needed */
+    height: 688px; /* Adjust the height proportionally to maintain the aspect ratio */
+    background-image: url('imgs/phone2.png'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Ensure the background is behind other elements */
+    opacity: 0.5; /* Adjust the opacity as needed */
+    background-size: cover;
+}
+
+
+
 .button{
-    width: 45px;
-    height: 45px;
+    width: 20%;
+    height: 20%;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .container{
@@ -25,6 +61,36 @@
     align-items: center;
     justify-content: center;
 }
+
+#directions-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#directions-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+#close-directions-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 
         #popup {
             display: none;
@@ -110,3 +176,64 @@
             color: #1da1f2;
         }
         
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    height: 100vh;
+}
+
+.grid-button {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay-image {
+    width: 80px; /* Adjust the size of the image as needed */
+    height: 80px; /* Adjust the size of the image as needed */
+    border-radius: 50%;
+}
+
+.overlay-content {
+    color: white;
+    margin-top: 10px;
+}
+
+#close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.timestamp {
+    color: #657786;
+    font-size: 12px;
+    margin-top: 10px;
+}

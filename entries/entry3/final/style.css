@@ -1,14 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     background-color: rgb(118, 106, 94)
     }
 
+    audio {
+        padding-left: 4vw; /* Adjust padding for responsiveness */
+    }    
+
 h1 {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 3vw; /* Adjust font size for responsiveness */
+    line-height: 4vw; /* Adjust line height for responsiveness */
     color: rgb(247, 235, 212);
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
+    padding: 2vw; /* Adjust padding for responsiveness */
 }
 
 p{
@@ -17,9 +28,37 @@ p{
   
 .circle{
     shape-outside: circle(50%);
-    width: 200px;
-    height: 200px;
+    width: 20vw;
+    height: 20vw;
     float: left;
+}
+
+.circle1{
+    shape-outside: circle(50%);
+    width: 20vw;
+    height: 20vw;
+    float: right;
+}
+
+.circle2{
+    shape-outside: circle(50%);
+    width: 20vw;
+    height: 20vw;
+    float: right;
+}
+
+.circle3{
+    shape-outside: circle(50%);
+    width:20vw;
+    height: 20vw;
+    float: left;
+}
+
+.circle4{
+    shape-outside: circle(50%);
+    width: 20vw;
+    height: 20vw;
+    float:right;
 }
 
 .stain {
@@ -37,15 +76,15 @@ p{
 
 /* CATEGORY SECTION*/
 
-.index-category{
+.index-category {
     width: 100%;
-    padding: 100px;
-    margin: 60px;
-    max-width: 800px; 
+    padding: 5vw; /* Adjust padding for responsiveness */
+    margin: 3vw; /* Adjust margin for responsiveness */
+    max-width: 80vw; /* Adjust max-width for responsiveness */
     background-color: rgb(235, 227, 222);
     display: flex;
     justify-content: center;
-    column-gap: 20px;
+    column-gap: 10vw; /* Adjust column-gap for responsiveness */
     flex-wrap: wrap;
     align-content: center;
 }
@@ -53,16 +92,16 @@ p{
 .index-category p {
     color: #111;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 2vw; /* Adjust padding for responsiveness */
     flex-basis: 100%;
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 2vw; /* Adjust font size for responsiveness */
 }
 
 .index-category-box {
-    width: 2000px;
-    height: 2500px;
-    padding: 60px;
+    width: 100%;
+    max-width: 80vw; /* Adjust max-width for responsiveness */
+    padding: 5vw; /* Adjust padding for responsiveness */
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,7 +109,6 @@ p{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 100;
 }
 
 .index-category-box:nth-child(1) {
@@ -93,15 +131,16 @@ p{
 }
 
 .index-category-box h3 {
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 1.5vw; /* Adjust font size for responsiveness */
+    line-height: 1.7vw; /* Adjust line height for responsiveness */
     text-align: center;
-    text-shadow: 0px -4px 0px black;
+    text-shadow: 0px -0.4vw 0px black; /* Adjust text-shadow for responsiveness */
     z-index: 100;
 }
 
-h3{
-    color:rgb(0, 0, 0);
+
+h3 {
+    color: rgb(0, 0, 0);
     letter-spacing: 4px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -112,45 +151,81 @@ body {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Hide horizontal scrollbar */
-    height: 2000px; /* Adjust the body height to simulate scrolling */
-    width: 2000px;
-  }
+}
 
-  .coffee-stain {
+.coffee-stain {
     position: fixed;
-    width: 100px; /* Adjust the width of the coffee stain */
+    width: 10vw; /* Adjust width for responsiveness */
     height: auto;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-  }
+}
 
   #stain1 {
-    top: 20px;
-    left: 5px;
-    width: 500px;
+    width: 80vw;
+    top: 5vh;
+    left: 20vw;
   }
 
   #stain2 {
-    top: 120px;
-    left: 50px;
+    width: 50vw;
+    top: 5vh;
+    left: 10vw;
   }
 
   #stain3 {
-    top: 200px;
-    left: 100px;
+    width: 8vw;
+    top: 30vh;
+    right: 5vw;
   }
 
   #stain4 {
-    top: 200px;
-   right: 100px;
+    width: 12vw;
+    bottom: 10vh;
+    left: 5vw;
   }
 
   #stain5 {
-    top: 200px;
-    right: 100px;
+    width: 18vw;
+    bottom: 20vh;
+    right: 10vw;
   }
 
   #stain6 {
-    top: 200px;
-    right: 100px;
+    width: 14vw;
+    bottom: 5vh;
+    right: 20vw;
   }
+
+  /* Add media query for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+        line-height: 6vw; /* Adjust line height for smaller screens */
+        padding: 2vw; /* Adjust padding for smaller screens */
+    }
+
+    .index-category {
+        padding: 2vw; /* Adjust padding for smaller screens */
+        margin: 2vw; /* Adjust margin for smaller screens */
+        column-gap: 5vw; /* Adjust column-gap for smaller screens */
+    }
+
+    .index-category p {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+
+    .index-category-box {
+        padding: 2vw; /* Adjust padding for smaller screens */
+    }
+
+    .index-category-box h3 {
+        font-size: 2vw; /* Adjust font size for smaller screens */
+        line-height: 2.2vw; /* Adjust line height for smaller screens */
+        text-shadow: 0px -0.2vw 0px black; /* Adjust text-shadow for smaller screens */
+    }
+
+    .coffee-stain {
+        width: 20vw; /* Adjust width for smaller screens */
+    }
+}
